@@ -1,0 +1,10 @@
+{
+  "final_valid_loss": 2.249843382835388,
+  "final_valid_perplexity": 9.486250010429208,
+  "best_valid_loss": 2.249843382835388,
+  "num_parameters": 22696448,
+  "num_steps": 1200,
+  "tokens_processed": 9830400,
+  "wall_time_s": 129.49,
+  "tokens_per_s": 75913.8
+}

@@ -1,0 +1,31 @@
+{
+  "tinystories_tokenizer_on_tinystories": {
+    "bytes": 9675,
+    "tokens": 2333,
+    "bytes_per_token": 4.147021003000429
+  },
+  "owt_tokenizer_on_owt": {
+    "bytes": 34225,
+    "tokens": 7796,
+    "bytes_per_token": 4.3900718317085685
+  },
+  "tinystories_tokenizer_on_owt": {
+    "bytes": 34225,
+    "tokens": 10382,
+    "bytes_per_token": 3.2965709882488925
+  },
+  "owt_tokenizer_on_tinystories": {
+    "bytes": 9675,
+    "tokens": 2360,
+    "bytes_per_token": 4.09957627118644
+  },
+  "tinystories_bytes_per_second": 4068475.9062730474,
+  "pile_825gb_hours_tinystories_tokenizer": 56.327399238944054,
+  "owt_bytes_per_second": 3317153.1027062754,
+  "pile_825gb_hours_owt_tokenizer": 69.0853450447321,
+  "vocab_sizes": {
+    "tinystories": 10000,
+    "owt": 32000
+  },
+  "uint16_ok": true
+}

@@ -1,0 +1,182 @@
+{
+  "gpt2_small": {
+    "config": {
+      "vocab_size": 50257,
+      "context_length": 1024,
+      "num_layers": 12,
+      "d_model": 768,
+      "num_heads": 12,
+      "d_ff": 2048
+    },
+    "parameters": {
+      "token_embedding": 38597376,
+      "per_layer": 7079424,
+      "blocks": 84953088,
+      "final_norm": 768,
+      "lm_head": 38597376,
+      "total": 162148608,
+      "fp32_memory_gb": 0.648594432
+    },
+    "forward_flops": {
+      "qkv_projections": 43486543872,
+      "attention_scores": 19327352832,
+      "attention_weighted_sum": 19327352832,
+      "output_projection": 14495514624,
+      "feed_forward": 115964116992,
+      "lm_head": 79047426048,
+      "total": 291648307200,
+      "total_tflops": 0.2916483072,
+      "proportions": {
+        "attention_projections": 0.1988081434542268,
+        "attention_matrix_products": 0.13253876230281786,
+        "feed_forward": 0.3976162869084536,
+        "lm_head": 0.2710368073345018
+      }
+    }
+  },
+  "gpt2_medium": {
+    "config": {
+      "vocab_size": 50257,
+      "context_length": 1024,
+      "num_layers": 24,
+      "d_model": 1024,
+      "num_heads": 16,
+      "d_ff": 2752
+    },
+    "parameters": {
+      "token_embedding": 51463168,
+      "per_layer": 12650496,
+      "blocks": 303611904,
+      "final_norm": 1024,
+      "lm_head": 51463168,
+      "total": 406539264,
+      "fp32_memory_gb": 1.626157056
+    },
+    "forward_flops": {
+      "qkv_projections": 154618822656,
+      "attention_scores": 51539607552,
+      "attention_weighted_sum": 51539607552,
+      "output_projection": 51539607552,
+      "feed_forward": 415538085888,
+      "lm_head": 105396568064,
+      "total": 830172299264,
+      "total_tflops": 0.830172299264,
+      "proportions": {
+        "attention_projections": 0.24833209972287973,
+        "attention_matrix_products": 0.12416604986143986,
+        "feed_forward": 0.5005443885039295,
+        "lm_head": 0.12695746191175097
+      }
+    }
+  },
+  "gpt2_large": {
+    "config": {
+      "vocab_size": 50257,
+      "context_length": 1024,
+      "num_layers": 36,
+      "d_model": 1280,
+      "num_heads": 20,
+      "d_ff": 3392
+    },
+    "parameters": {
+      "token_embedding": 64328960,
+      "per_layer": 19581440,
+      "blocks": 704931840,
+      "final_norm": 1280,
+      "lm_head": 64328960,
+      "total": 833591040,
+      "fp32_memory_gb": 3.33436416
+    },
+    "forward_flops": {
+      "qkv_projections": 362387865600,
+      "attention_scores": 96636764160,
+      "attention_weighted_sum": 96636764160,
+      "output_projection": 120795955200,
+      "feed_forward": 960327843840,
+      "lm_head": 131745710080,
+      "total": 1768530903040,
+      "total_tflops": 1.76853090304,
+      "proportions": {
+        "attention_projections": 0.273211974961498,
+        "attention_matrix_products": 0.10928478998459921,
+        "feed_forward": 0.5430088002359773,
+        "lm_head": 0.07449443481792539
+      }
+    }
+  },
+  "gpt2_xl": {
+    "config": {
+      "vocab_size": 50257,
+      "context_length": 1024,
+      "num_layers": 48,
+      "d_model": 1600,
+      "num_heads": 25,
+      "d_ff": 4288
+    },
+    "parameters": {
+      "token_embedding": 80411200,
+      "per_layer": 30825600,
+      "blocks": 1479628800,
+      "final_norm": 1600,
+      "lm_head": 80411200,
+      "total": 1640452800,
+      "fp32_memory_gb": 6.5618112
+    },
+    "forward_flops": {
+      "qkv_projections": 754974720000,
+      "attention_scores": 161061273600,
+      "attention_weighted_sum": 161061273600,
+      "output_projection": 251658240000,
+      "feed_forward": 2023332249600,
+      "lm_head": 164682137600,
+      "total": 3516769894400,
+      "total_tflops": 3.5167698944,
+      "proportions": {
+        "attention_projections": 0.28623793714878315,
+        "attention_matrix_products": 0.09159613988761062,
+        "feed_forward": 0.5753382536690541,
+        "lm_head": 0.046827669294552066
+      }
+    }
+  },
+  "gpt2_xl_ctx16384": {
+    "forward_flops": {
+      "qkv_projections": 12079595520000,
+      "attention_scores": 41231686041600,
+      "attention_weighted_sum": 41231686041600,
+      "output_projection": 4026531840000,
+      "feed_forward": 32373315993600,
+      "lm_head": 2634914201600,
+      "total": 133577729638400,
+      "total_tflops": 133.5777296384,
+      "proportions": {
+        "attention_projections": 0.1205749446677968,
+        "attention_matrix_products": 0.6173437166991196,
+        "feed_forward": 0.24235563878227157,
+        "lm_head": 0.019725699850812056
+      }
+    }
+  },
+  "gpt2_xl_adamw_memory": {
+    "formula": "4 * [ L*(B*n*(11*d + 4*d_ff) + 2*B*h*n^2) + B*n*d (embeddings) + B*n*d (final norm) + 2*B*n*V (logits + loss) ] + 16*P",
+    "per_batch_bytes": 17323663360,
+    "fixed_bytes": 26247244800,
+    "notes": "B=batch size\uff0cn=context \u957f\u5ea6\uff0cd=d_model\uff0cd_ff=\u524d\u9988\u7f51\u7edc\u5bbd\u5ea6\uff0ch=\u5934\u6570\uff0cV=\u8bcd\u8868\u5927\u5c0f\uff0cP=\u53c2\u6570\u91cf\u3002\u5047\u8bbe float32 \u4e14\u6240\u6709\u5217\u51fa\u7684\u6fc0\u6d3b\u90fd\u4fdd\u7559\u5230\u53cd\u5411\u4f20\u64ad\uff1b\u5b9e\u9645\u5b9e\u73b0\u53ef\u4ee5\u901a\u8fc7\u91cd\u8ba1\u7b97\u6362\u53d6\u66f4\u5c0f\u7684\u663e\u5b58\u5360\u7528\u3002",
+    "max_batch_size_80gb": 3,
+    "peak_bytes_at_batch": {
+      "1": 43570908160,
+      "2": 60894571520,
+      "4": 95541898240,
+      "8": 164836551680,
+      "16": 303425858560
+    }
+  },
+  "mfu_training_time": {
+    "tokens": 419430400000,
+    "training_flops": 4128334644510720000000,
+    "effective_flops_per_s": 247500000000000.0,
+    "seconds": 16680139.977821091,
+    "hours": 4633.372216061414,
+    "days": 193.0571756692256
+  }
+}

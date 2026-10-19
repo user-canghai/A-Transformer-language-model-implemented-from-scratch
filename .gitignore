@@ -1,0 +1,29 @@
+# 字节码与缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# 虚拟环境
+.venv/
+.venv-npu/
+env/
+venv/
+
+# 数据与训练产物
+data/
+runs/
+*.npy
+*.pt
+*.pth
+*.bin
+
+# 报告构建中间产物与压缩包
+writeup/writeup.html
+*.zip
+
+# 编辑器与系统文件
+.idea/
+.vscode/
+.DS_Store
